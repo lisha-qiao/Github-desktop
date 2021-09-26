@@ -1,0 +1,894 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#"
+     xml:base="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owlapi="http://www.semanticweb.org/owlapi#"
+     xmlns:GDPRtEXT="https://w3id.org/GDPRtEXT#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0">
+        <owl:imports rdf:resource="http://purl.org/spar/tvc"/>
+        <owl:imports rdf:resource="http://purl.org/spar/frbr/2018-03-29"/>
+        <owl:imports rdf:resource="http://purl.org/spar/pwo/2017-06-01"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl"/>
+        <owl:imports rdf:resource="https://w3id.org/GConsent/versions/v0.5"/>
+        <owl:imports rdf:resource="https://w3id.org/GDPRtEXT/v/0.7"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral -->
+
+    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+        <rdfs:label>rdf:PlainLiteral</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Literal -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
+        <rdfs:label>rdfs:Literal</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#designates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#designates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GDPRtEXT#Controller"/>
+        <rdfs:range rdf:resource="https://w3id.org/GDPRtEXT#DPO"/>
+        <rdfs:label>designates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#determines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#determines">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/GConsent#Purpose"/>
+        <rdfs:label>determines</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#flims -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#flims">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#camera"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#footage"/>
+        <rdfs:label>films</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#give_consent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#give_consent">
+        <rdfs:domain rdf:resource="https://w3id.org/GDPRtEXT#DataSubject"/>
+        <rdfs:range rdf:resource="https://w3id.org/GDPRtEXT#Controller"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#has_data_controller -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#has_data_controller">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Personal_date_processing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Controller"/>
+        <rdfs:label>has data controller</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#isRepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#isRepresentedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GDPRtEXT#Controller"/>
+        <rdfs:range rdf:resource="https://w3id.org/GDPRtEXT#ControllerRepresentative"/>
+        <rdfs:label>is Represented By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#isSubjectTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#isSubjectTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+        <rdfs:range rdf:resource="https://w3id.org/GDPRtEXT#DPA"/>
+        <rdfs:label>is Subject to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#is_based_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#is_based_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Personal_date_processing"/>
+        <rdfs:range rdf:resource="https://w3id.org/GConsent#Purpose"/>
+        <rdfs:label>is based on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#nominates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#nominates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GDPRtEXT#Controller"/>
+        <rdfs:range rdf:resource="https://w3id.org/GDPRtEXT#Processor"/>
+        <rdfs:label>nominates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#related_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#related_to">
+        <rdfs:domain rdf:resource="https://w3id.org/GDPRtEXT#PersonalData"/>
+        <rdfs:range rdf:resource="https://w3id.org/GDPRtEXT#DataSubject"/>
+        <rdfs:label>related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#LegalResource -->
+
+    <rdf:Description rdf:about="http://data.europa.eu/eli/ontology#LegalResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalInstrument"/>
+        <rdfs:label>Legal Resource</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#LegalResourceSubdivision -->
+
+    <rdf:Description rdf:about="http://data.europa.eu/eli/ontology#LegalResourceSubdivision">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:label>Legal Resource Subdivision</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Endeavour -->
+
+    <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Endeavour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalInstrument"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#ResponsibleEntity -->
+
+    <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#ResponsibleEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalInstrument"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Subject -->
+
+    <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Subject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalInstrument"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/action.owl#Artifact -->
+
+    <owl:Class rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Artifact">
+        <rdfs:label>Artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.estrellaproject.org/lkif-core/process.owl#Process -->
+
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/process.owl#Process">
+        <rdfs:label>Process</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Controller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Controller">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GDPRtEXT#Controller"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#GeneralPersonalData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#GeneralPersonalData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GDPRtEXT#PersonalData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#IT_Organizations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#IT_Organizations">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+        <rdfs:label>IT Organizations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalInstrument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalInstrument">
+        <rdfs:label>LegalInstrument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalObligation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalObligation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GConsent#Purpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Personal_date_processing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Personal_date_processing">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Processing_Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Processing_Activity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GConsent#Processing"/>
+        <rdfs:label>Processing Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Surveillance_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Surveillance_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#System"/>
+        <rdfs:label>Surveillance system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#System -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#System">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+        <rdfs:label>System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#TheThirdParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#TheThirdParty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GDPRtEXT#Entity"/>
+        <rdfs:label>The Third Party</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#WorkflowExecution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#WorkflowExecution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#location_indexed_situation"/>
+        <rdfs:label>Work flow Execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#a_audio_surveillance_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#a_audio_surveillance_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Surveillance_system"/>
+        <rdfs:label>a audio surveillance system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#a_video_surveillance_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#a_video_surveillance_system">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Surveillance_system"/>
+        <rdfs:label>a video surveillance system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#camera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#camera">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Artifact"/>
+        <rdfs:label>camera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#entrace_other_house -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#entrace_other_house">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:label>entrace other house</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#entrance_home -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#entrance_home">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:label>entrance home</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#footage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#footage">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Artifact"/>
+        <rdfs:label>footage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#home -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#home">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:label>home</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#legal_interest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#legal_interest">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GConsent#Purpose"/>
+        <rdfs:label>legal interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#location_indexed_situation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#location_indexed_situation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdfs:label>location indexed situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#monitoring -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#monitoring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GDPRtEXT#CollectionOfPersonalData"/>
+        <rdfs:label>monitoring</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#perfom_contract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#perfom_contract">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GConsent#Purpose"/>
+        <rdfs:label>perform contract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#protect_health_of_family -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#protect_health_of_family">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#purely_domestic_purpose"/>
+        <rdfs:label>protect health of family</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#protect_the_life_of_family -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#protect_the_life_of_family">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#purely_domestic_purpose"/>
+        <rdfs:label>protect the life of family</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#protect_the_property_of_family -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#protect_the_property_of_family">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#purely_domestic_purpose"/>
+        <rdfs:label>protect the property of family</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#public_area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#public_area">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:label>public area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#public_path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#public_path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#public_area"/>
+        <rdfs:label>public path</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#public_space -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#public_space">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#public_area"/>
+        <rdfs:label>public space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#purely_domestic_purpose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#purely_domestic_purpose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#legal_interest"/>
+        <rdfs:label>purely domestic purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#recording -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#recording">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GDPRtEXT#CollectionOfPersonalData"/>
+        <rdfs:label>recording</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#the_behaviour_of_destroying_personal_property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#the_behaviour_of_destroying_personal_property">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GDPRtEXT#CriminalData"/>
+        <rdfs:label>the behaviour of destroying personal property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#thrown_object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#thrown_object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#the_behaviour_of_destroying_personal_property"/>
+        <rdfs:label>thrown object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#value_in_location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#value_in_location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#location_indexed_situation"/>
+        <rdfs:label>value in location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#window -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#window">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:label>window</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Location -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Location">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/ns/prov#Location</rdfs:isDefinedBy>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GConsent#Processing -->
+
+    <rdf:Description rdf:about="https://w3id.org/GConsent#Processing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/GDPRtEXT#Activity"/>
+        <rdfs:label>Processing</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/GConsent#Purpose -->
+
+    <owl:Class rdf:about="https://w3id.org/GConsent#Purpose">
+        <rdfs:label>Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#AccountingManagersinChargeofCustomsMatters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#AccountingManagersinChargeofCustomsMatters">
+        <rdf:type rdf:resource="https://w3id.org/GDPRtEXT#DataSubject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#ApplyforAEO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#ApplyforAEO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#LegalObligation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Customs_Authority -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Customs_Authority">
+        <rdf:type rdf:resource="https://w3id.org/GDPRtEXT#RegulatoryAuthority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#DeutschePostAG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#DeutschePostAG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Controller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#DivisionalHeads -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#DivisionalHeads">
+        <rdf:type rdf:resource="https://w3id.org/GDPRtEXT#DataSubject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#ManagingDirectors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#ManagingDirectors">
+        <rdf:type rdf:resource="https://w3id.org/GDPRtEXT#DataSubject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Ryneš -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Ryneš">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Controller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#TaxIdentificationNumbers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#TaxIdentificationNumbers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#GeneralPersonalData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#The_camera_recorded_footage_during_an_incident_that_involve_the_behavour_of_two_suspects -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#The_camera_recorded_footage_during_an_incident_that_involve_the_behavour_of_two_suspects">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Personal_date_processing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#TransmissiontoCostumAuthority -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#TransmissiontoCostumAuthority">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#Personal_date_processing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#thePersonsinChargeofManagingCustomsMatters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lisha.qiao/ontologies/2021/2/legalinterest_ontology_v1.0#thePersonsinChargeofManagingCustomsMatters">
+        <rdf:type rdf:resource="https://w3id.org/GDPRtEXT#DataSubject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://data.europa.eu/eli/ontology#has_part">
+        <rdfs:label>has part</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://data.europa.eu/eli/ontology#is_part_of">
+        <rdfs:label>is part of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/spar/pwo/WorkflowExecution">
+        <rdfs:label>Work flow Execution</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Action">
+        <rdfs:label>Action</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Creation">
+        <rdfs:label>Creation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Organisation">
+        <rdfs:label>Organisation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#Reaction">
+        <rdfs:label>Reaction</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#actor">
+        <rdfs:label>actor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/action.owl#actor_in">
+        <rdfs:label>actor in</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Entity">
+        <rdfs:label>Mental Entity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/mereology.owl#direct_part">
+        <rdfs:label>direct part</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/mereology.owl#member">
+        <rdfs:label>member</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/mereology.owl#member_of">
+        <rdfs:label>member of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/mereology.owl#part">
+        <rdfs:label>part</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/process.owl#participant">
+        <rdfs:label>participant</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/process.owl#participant_in">
+        <rdfs:label>participant in</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/process.owl#result_of">
+        <rdfs:label>result of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/role.owl#Epistemic_Role">
+        <rdfs:label>Epistemic Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/role.owl#Function">
+        <rdfs:label>Function</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/role.owl#Organisation_Role">
+        <rdfs:label>Organisation Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/role.owl#Person_Role">
+        <rdfs:label>Person Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/role.owl#Role">
+        <rdfs:label>Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/role.owl#Social_Role">
+        <rdfs:label>Social Role</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/role.owl#played_by">
+        <rdfs:label>played by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.estrellaproject.org/lkif-core/role.owl#plays">
+        <rdfs:label>plays</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Goal">
+        <rdfs:label>Goal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan">
+        <rdfs:label>Plan</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#hasMainGoal">
+        <rdfs:label>has main goal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isMainGoalIn">
+        <rdfs:label>is main goal in</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">
+        <rdfs:label>rdf:XMLLiteral</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#NCName">
+        <rdfs:label>xsd:NCName</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#NMTOKEN">
+        <rdfs:label>xsd:NMTOKEN</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#Name">
+        <rdfs:label>xsd:Name</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI">
+        <rdfs:label>xsd:anyURI</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#base64Binary">
+        <rdfs:label>xsd:base64Binary</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean">
+        <rdfs:label>xsd:boolean</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#byte">
+        <rdfs:label>xsd:byte</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date">
+        <rdfs:label>xsd:date</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime">
+        <rdfs:label>xsd:dateTime</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp">
+        <rdfs:label>xsd:dateTimeStamp</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal">
+        <rdfs:label>xsd:decimal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double">
+        <rdfs:label>xsd:double</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#duration">
+        <rdfs:label>xsd:duration</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float">
+        <rdfs:label>xsd:float</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gDay">
+        <rdfs:label>xsd:gDay</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gMonth">
+        <rdfs:label>xsd:gMonth</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gYear">
+        <rdfs:label>xsd:gYear</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth">
+        <rdfs:label>xsd:gYearMonth</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#hexBinary">
+        <rdfs:label>xsd:hexBinary</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#int">
+        <rdfs:label>xsd:int</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer">
+        <rdfs:label>xsd:integer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#language">
+        <rdfs:label>xsd:language</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#long">
+        <rdfs:label>xsd:long</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#negativeInteger">
+        <rdfs:label>xsd:negativeInteger</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">
+        <rdfs:label>xsd:nonNegativeInteger</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#nonPositiveInteger">
+        <rdfs:label>xsd:nonPositiveInteger</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#normalizedString">
+        <rdfs:label>xsd:normalizedString</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger">
+        <rdfs:label>xsd:positiveInteger</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#short">
+        <rdfs:label>xsd:short</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string">
+        <rdfs:label>xsd:string</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#token">
+        <rdfs:label>xsd:token</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#unsignedByte">
+        <rdfs:label>xsd:unsignedByte</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#unsignedInt">
+        <rdfs:label>xsd:unsignedInt</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#unsignedLong">
+        <rdfs:label>xsd:unsignedLong</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#rational">
+        <rdfs:label>owl:rational</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#real">
+        <rdfs:label>owl:real</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:label>skos:Concept</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
